@@ -15,7 +15,7 @@ body {
 	border-radius: 10px;
 	max-width: 643px;
 	max-height: 380px;
-    overflow: hidden;
+	overflow: hidden;
 }
 
 .portrait-column {
@@ -65,24 +65,24 @@ body {
 
 .contact-list {
 	width: 100%;
-	list-style: none;
-	padding-left: 16px;
 	margin: 0;
+	padding-left: 16px;
+	list-style: none;
 }
 
 .contact-list li {
-	padding-block: 12px;
 	display: flex;
 	align-items: center;
+	padding-block: 12px;
 }
 
 .contact-list li img {
 	margin-right: 12px;
 }
-
 .contact-list li span {
-	font-weight: 400;
 	display: block;
 	width: 100%;
+	font-weight: 400;
 	border-bottom: 1px solid rgba(255, 255, 255, 0.4);
 }
+
