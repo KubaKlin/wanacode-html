@@ -135,7 +135,7 @@ p {
   }
 }
 
-.section {
+section {
   margin-bottom: 50px;
 }
 
@@ -168,7 +168,7 @@ p {
   margin-bottom: 60px;
 }
 
-.section .item {
+.section .experience-item {
   margin-bottom: 30px;
 }
 
@@ -192,9 +192,12 @@ p {
   margin-bottom: 5px;
 }
 
-.skillset .item {
+.projects-item {
   margin-bottom: 15px;
-  overflow: hidden;
+}
+
+.skillset .skillset-item {
+  margin-bottom: 15px;
 }
 
 .skillset .level-title {
