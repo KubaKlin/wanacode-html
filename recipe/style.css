@@ -27,7 +27,7 @@ body{
 @media (max-width: 992px) {
   .section-blocks {
     margin: 0 auto 15px;
-    width: 100%;
+    width: auto;
   }
 }
 
