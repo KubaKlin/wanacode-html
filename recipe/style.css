@@ -62,9 +62,15 @@ body{
 }
 
 .recipe-instructions {
-  display:block;
+  display: block;
   margin: 0 auto;
   max-width: 600px;
+}
+
+@media (max-width: 992px) {
+  .recipe-instructions {
+    max-width: 400px;
+  }
 }
 
 .recipe-instructions ul {
