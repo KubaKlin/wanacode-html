@@ -73,18 +73,25 @@ body {
   justify-content: center;
 }
 
+.popcorn-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
 .ticket-popcorn:before {
   content: '';
-  position: absolute;
-  top: -50px;
-  bottom: -50px;
-  left: 0;
+  position: relative;
+  top: 0;
+  left: -45px;
+  height: 303px;
   border-left: 2px dashed red;
 }
 
 .ticket-popcorn-pop {
-  position: absolute;
+  position: relative;
   top: 0;
+  left: 15px;
   opacity: 0;
 }
 
@@ -110,7 +117,7 @@ body {
   transition: all 0.5s ease-out;
 }
 
-.ticket-popcorn>img:hover {
+.ticket-popcorn .popcorn-wrapper>img:hover {
   animation: shake-horizontal 0.6s cubic-bezier(0.455, 0.030, 0.515, 0.955) both;
   top: 10px;
 }
@@ -125,7 +132,7 @@ body {
     opacity: 0;
   }
   100% {
-    transform: translateY(-40px);
+    transform: translateY(-20px);
     opacity: 1;
   }
 }
