@@ -139,7 +139,7 @@ p {
   margin-bottom: 50px;
 }
 
-.section:last-of-type {
+.section:last-child {
   margin-bottom: 0;
 }
 
