@@ -1,0 +1,88 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 100vh;
+  padding: 0;
+  margin: 0;
+  font-family: "Roboto", sans-serif;
+  font-size: 16px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+p {
+  margin: 0;
+}
+
+.credit-card {
+  display: flex;
+  flex-direction: column;
+  background-color: #275ecc;
+  border-radius: 10px;
+  height: 180px;
+  width: 320px;
+  padding: 10px 20px;
+}
+
+.credit-card-front {
+  justify-content: flex-end;
+  margin-bottom: 15px;
+}
+
+.credit-card-front .information-wrapper {
+  margin-block: 10px;
+}
+
+.number {
+  font-size: 26px;
+}
+
+.information-wrapper {
+  display: flex;
+  align-items: center;
+}
+
+.information-wrapper p:first-of-type {
+  text-transform: uppercase;
+  max-width: 50px;
+  font-size: 12px;
+}
+
+.credit-card-back .name {
+  font-family: "Qwitcher Grypen", cursive;
+  font-weight: 700;
+}
+
+.magnetic-strip{
+  position: relative;
+  width: 320px;
+  height: 30px;
+  left: -20px;
+  margin-top: 15px;
+  background-color: #000;
+}
+
+.credit-card-back .information-wrapper{
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-top: 20px;
+  background-color: #ccc;
+  padding-block: 4px;
+  max-width: 200px;
+}
+
+.credit-card-back .information-wrapper .name {
+  max-width: none;
+  text-transform: initial;
+  font-size: 22px;
+  padding-inline: 15px;
+}
+
+.credit-card-back .information-wrapper .number {
+  font-size: 12px;
+}
