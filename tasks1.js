@@ -36,7 +36,7 @@ console.log(yearsLeftToRetirenment);
 const isPayingVAT = true;
 let VATRateInPoland = 0.23;
 const incomeTaxRate = 0.12;
-let monthlyIncome = 3500;
+const monthlyIncome = 3500;
 let taxToPay = 0;
 
 if (isPayingVAT) {
