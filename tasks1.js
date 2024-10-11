@@ -166,11 +166,7 @@ if (carSpeed >= speedLimit) {
 
 // 16
 const ageVariable = 16;
-let isAdult = false;
-
-if(ageVariable >= 18) {
-  isAdult = true;
-}
+const isAdult = ageVariable >= 18
 
 console.log(isAdult)
 
