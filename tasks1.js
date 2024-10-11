@@ -7,7 +7,7 @@ console.log(convertMinutesToHours(75));
 
 // 2
 function isTextUppercase(text) {
-  return /^[A-Z]*$/.test(text)
+  return text.toUpperCase() === text;
 }
 console.log(isTextUppercase('START'));
 
