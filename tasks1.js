@@ -28,9 +28,7 @@ if (avarageGrade >=4 ) {
 // 4
 const currentAge = 30;
 const retirenmentAgeInPoland = 67;
-let yearsLeftToRetirenment;
-
-yearsLeftToRetirenment = retirenmentAgeInPoland - currentAge;
+const yearsLeftToRetirenment = retirenmentAgeInPoland - currentAge;
 
 console.log(yearsLeftToRetirenment);
 
