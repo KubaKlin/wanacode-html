@@ -57,9 +57,9 @@ if (isSunny) {
 
 // 7
 const currentMonth = 3;
-if ( currentMonth === 12 || currentMonth === 1 || currentMonth === 2 ) {
+if (currentMonth === 12 || currentMonth === 1 || currentMonth === 2) {
   console.log("it's winter");
-} else if (currentMonth === 3 || currentMonth === 4 || currentMonth === 5) {
+} else if (currentMonth >= 3 || currentMonth <= 5) {
   console.log("it's spring");
 } else if (currentMonth === 6 || currentMonth === 7 || currentMonth === 8) {
   console.log("it's summer");
