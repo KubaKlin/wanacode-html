@@ -174,17 +174,10 @@ console.log(isAdult)
 const personAge = 21;
 const hasDrivingLicense = true;
 
-let isPersonAdult = false, canDriveLegally = false;
+const isPersonAdult = personAge >= 18;
+const canDriveLegally = isPersonAdult && hasDrivingLicense;
 
-if(personAge >= 18) {
-  isPersonAdult = true;
-}
-
-if(hasDrivingLicense) {
-  canDriveLegally = true;
-}
-
-if (isPersonAdult && canDriveLegally) {
+if (canDriveLegally) {
   console.log('This person can legally drive');
 } else {
   console.log("This person can't legally drive");
