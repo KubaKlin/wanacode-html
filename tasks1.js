@@ -30,7 +30,7 @@ console.log(getBillboardPrice('Hello world!', 10));
 
 // 5
 function makeOppositeNumer(number) {
-  return number - (number*2);
+  return number - (number * 2);
 }
 console.log(makeOppositeNumer(45));
 
