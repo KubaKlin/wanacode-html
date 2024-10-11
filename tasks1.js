@@ -13,12 +13,10 @@ console.log(isTextUppercase('START'));
 
 
 // 3
-function isDivisible(n, x, y) {
-  if (n % x === 0 && n % y === 0) {
-    return true;
-  } else return false;
+function isDivisible(number1, number2, number3) {
+  return number1 % number2 === 0 && number1 % number3 === 0;
 }
-console.log(isDivisible(3,3,4));
+console.log(isDivisible(6,3,3));
 
 
 // 4
