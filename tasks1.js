@@ -55,9 +55,20 @@ console.log(removeChar('START'));
 
 // 8
 function basicOp(operation, value1, value2){
-  return eval(value1 + operation + value2);
+  if(operation === "+") {
+    return value1 + value2
+  }
+  if(operation === "-") {
+    return value1 - value2
+  }
+  if(operation === "*") {
+    return value1 * value2
+  }
+  if(operation === "/") {
+    return value1 / value2
+  }
 }
-console.log(basicOp("+", 4, 7));
+console.log(basicOp("+", 4, 8));
 
 // 9
 function century(year) {
