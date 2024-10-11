@@ -21,6 +21,8 @@ const avarageGrade = (physicsGrade + mathGrade + englishGrade)/3;
 
 if (avarageGrade >=4 ) {
   console.log('avarage grade is ' + avarageGrade + ' congrats!')
+} else {
+  console.log('Try harder!')
 }
 
 // 4
