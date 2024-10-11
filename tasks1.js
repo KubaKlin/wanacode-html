@@ -39,7 +39,9 @@ console.log(makeOppositeNumer(45));
 function makeNegativeWithCheck(num) {
   if (num < 0){
     return num
-  } else return -num
+  } else {
+    return -num
+  }
 }
 console.log(makeNegativeWithCheck(45));
 
