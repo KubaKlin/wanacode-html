@@ -83,9 +83,9 @@ console.log(century(1700));
 // 10
 function evenOrOdd(number) {
   if (number % 2 === 0) {
-    return ('Even');
+    return 'Even';
   } else {
-    return ('Odd');
+    return 'Odd';
   }
 }
 console.log(evenOrOdd(2));
