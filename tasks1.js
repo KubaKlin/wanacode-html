@@ -93,8 +93,8 @@ console.log(evenOrOdd(2));
 
 // 11
 function areYouPlayingBanjo(name) {
-  const firstLetterFromName = Array.from(name)[0];
-  if (firstLetterFromName === 'R' || firstLetterFromName === 'r') {
+  const firstLetterFromName = (name.toLowerCase())[0];
+  if (firstLetterFromName === 'r') {
     return name + " plays banjo"
   } else {
     return name + " does not play banjo"
