@@ -59,18 +59,18 @@ function removeChar(string){
 console.log(removeChar('START'));
 
 // 8
-function basicOp(operation, value1, value2){
-  if(operation === "+") {
-    return value1 + value2
+function basicOp(operation, valueOne, valueTwo){
+  if (operation === '+') {
+    return valueOne + valueTwo;
   }
-  if(operation === "-") {
-    return value1 - value2
+  if (operation === '-') {
+    return valueOne - valueTwo;
   }
-  if(operation === "*") {
-    return value1 * value2
+  if (operation === '*') {
+    return valueOne * valueTwo;
   }
-  if(operation === "/") {
-    return value1 / value2
+  if (operation === '/') {
+    return valueOne / valueTwo;
   }
 }
 console.log(basicOp("+", 4, 8));
