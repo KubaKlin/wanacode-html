@@ -52,9 +52,9 @@ console.log(makeNegativeWithCheck(45));
 
 
 // 7
-function removeChar(str){
-  const strLength = (str.trim().length)-1;
-  return str.substring(1, strLength);
+function removeChar(string){
+  const cutStringSign = (string.trim().length)-1;
+  return string.substring(1, cutStringSign);
 }
 console.log(removeChar('START'));
 
