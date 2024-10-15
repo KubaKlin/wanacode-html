@@ -50,21 +50,21 @@ console.log('tax to pay: ' + taxToPay);
 // 6
 const isSunny = false
 if (isSunny) {
-  console.log("Don't forget your sunglasses!")
+  console.log('Don`t forget your sunglasses!')
 } else {
-  console.log("You might need an umbrella.");
+  console.log('You might need an umbrella.');
 }
 
 // 7
 const currentMonth = 3;
 if (currentMonth === 12 || currentMonth === 1 || currentMonth === 2) {
-  console.log("it's winter");
+  console.log('it`s winter');
 } else if (currentMonth >= 3 || currentMonth <= 5) {
-  console.log("it's spring");
+  console.log('it`s spring');
 } else if (currentMonth === 6 || currentMonth === 7 || currentMonth === 8) {
-  console.log("it's summer");
+  console.log('it`s summer');
 } else if (currentMonth === 9 || currentMonth === 10 || currentMonth === 11) {
-  console.log("it's autumn");
+  console.log('it`s autumn');
 }
 
 // 8
@@ -180,5 +180,5 @@ const canDriveLegally = isPersonAdult && hasDrivingLicense;
 if (canDriveLegally) {
   console.log('This person can legally drive');
 } else {
-  console.log("This person can't legally drive");
+  console.log('This person can`t legally drive');
 }
