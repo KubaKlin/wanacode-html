@@ -41,11 +41,11 @@ console.log(makeOppositeNumer(45));
 
 
 // 6
-function makeNegativeWithCheck(num) {
-  if (num < 0){
-    return num
+function makeNegativeWithCheck(number) {
+  if (number < 0){
+    return number;
   } else {
-    return -num
+    return number * - 1;
   }
 }
 console.log(makeNegativeWithCheck(45));
