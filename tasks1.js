@@ -104,15 +104,15 @@ console.log(areYouPlayingBanjo('Robert'));
 
 // 12
 function bmi(weight, height) {
-  const bmiCalc = weight/(height*height);
-  if (bmiCalc <= 18.5) {
-    return "Underweight";
-  } else if (bmiCalc <= 25) {
-    return "Normal";
-  } else if (bmiCalc <= 30) {
-    return "Overweight";
-  } else if (bmiCalc > 30) {
-    return "Obese";
+  const bmiCalculate = weight / (height * height);
+  if (bmiCalculate <= 18.5) {
+    return 'Underweight';
+  } else if (bmiCalculate <= 25) {
+    return 'Normal';
+  } else if (bmiCalculate <= 30) {
+    return 'Overweight';
+  } else if (bmiCalculate > 30) {
+    return 'Obese';
   }
 }
 
