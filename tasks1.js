@@ -77,13 +77,9 @@ console.log(basicOp("+", 4, 8));
 
 // 9
 function century(year) {
-  if (year % 100 === 0) {
-    return (Math.floor(year / 100));
-  } else {
-    return (Math.floor(year / 100)+1);
-  }
+  return (Math.ceil(year / 100));
 }
-console.log(century(1700));
+console.log(century(1801));
 
 // 10
 function evenOrOdd(number) {
