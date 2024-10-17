@@ -153,16 +153,34 @@ function getPasswordRating(passwordVariable) {
 console.log(getPasswordRating('passWord'));
 
 // 10
-function getTotalOrderCost (baseItemCost, isVipMember, loyaltyPoints, isShippedInternationally) {
-  let finalCost = baseItemCost
-  if (isVipMember) finalCost = baseItemCost - (baseItemCost * 0.05)
-  if (loyaltyPoints) finalCost = finalCost - (loyaltyPoints * 0.01)
-  if (isShippedInternationally) {
-    finalCost = finalCost + 10
-  } else finalCost = finalCost + 5
-  return finalCost
+
+function getVipDiscount(isVipMember) {
+  if (isVipMember) {
+    return 0.05;
+  } return 1;
 }
 
+function getLoyaltyDiscount(loyaltyPoints) {
+  if (loyaltyPoints) {
+    return loyaltyPoints * 0.01;
+  } return 0;
+}
+
+function getInternationalShipping(isShippedInternationally) {
+  if (isShippedInternationally) {
+    return 10;
+  } else {
+    return 5;
+  }
+}
+
+function getTotalOrderCost (baseItemCost, isVipMember, loyaltyPoints, isShippedInternationally) {
+  const vipMemberDiscount = getVipDiscount(isVipMember);
+  const loyaltyDiscount = getLoyaltyDiscount(loyaltyPoints);
+  const shippingPrice = getInternationalShipping(isShippedInternationally);
+
+  return baseItemCost - (baseItemCost * vipMemberDiscount) - loyaltyDiscount + shippingPrice
+}
 console.log(getTotalOrderCost(10,true,10,true))
 
 // 11
