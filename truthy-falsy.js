@@ -1,11 +1,8 @@
 // 1
-const isEmployed = true;
-const isOnVacation = false;
-
 function setAlarm(isEmployed, isOnVacation){
   return isEmployed && !isOnVacation;
 }
-console.log(setAlarm(isEmployed, isOnVacation));
+console.log(setAlarm(true, false));
 
 // 2
 function closeCompare(numberA, numberB, numbersMargin){
