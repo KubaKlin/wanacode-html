@@ -17,23 +17,27 @@ function closeCompare(firstNumber, secondNumber, numbersMargin = 0){
 }
 
 // 3
-const or = (a, b) => {
-  if (a == true) return true
-  if (b == true) return true
-  return false
-};
+function or(firstVariable, secondVariable) {
+  if (firstVariable === true) {
+    return true;
+  }
+  if (secondVariable === true) {
+    return true;
+  }
+  return false;
+}
+console.log(or(true, false));
 
-const xor = (a, b) => {
-  if (a == true) {
-    if (b === true) return false
-    else return true
+function xor(firstVariable, secondVariable) {
+  if (firstVariable && !secondVariable) {
+    return true;
   }
-  if (b == true) {
-    if (a === true) return false
-    else return true
+  if (secondVariable && !firstVariable) {
+    return true;
   }
-  return false
-};
+  return false;
+}
+console.log(xor(true, true));
 
 // 4
 function isTruthy(bool, function1, function2) {
