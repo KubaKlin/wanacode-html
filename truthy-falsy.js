@@ -5,15 +5,15 @@ function setAlarm(isEmployed, isOnVacation){
 console.log(setAlarm(true, false));
 
 // 2
-function closeCompare(numberA, numberB, numbersMargin = 0){
-  const numbersDiff = Math.abs(numberA - numberB);
+function closeCompare(firstNumber, secondNumber, numbersMargin = 0){
+  const numbersDiff = Math.abs(firstNumber - secondNumber);
   if (numbersDiff <= numbersMargin) {
-    return 0
+    return 0;
   }
-  if (numberA < numberB) {
-    return -1
+  if (firstNumber < secondNumber) {
+    return -1;
   }
-  return 1
+  return 1;
 }
 
 // 3
