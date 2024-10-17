@@ -184,10 +184,23 @@ function getTotalOrderCost (baseItemCost, isVipMember, loyaltyPoints, isShippedI
 console.log(getTotalOrderCost(10,true,10,true))
 
 // 11
-function getTicketPrice (baseTicketPrice, daysLeftToShow, isShowOnWeekend) {
-  if (daysLeftToShow > 30) baseTicketPrice = baseTicketPrice - baseTicketPrice * 0.10
-  if (isShowOnWeekend) baseTicketPrice = baseTicketPrice + 15;
-  return baseTicketPrice;
+function getDaysLeftToShow(daysLeftToShow) {
+  if (daysLeftToShow > 30) {
+    return 0.10;
+  } return 0;
+}
+
+function ifShowOnWeekend(isOnWeekend) {
+  if (isOnWeekend) {
+    return 15;
+  } return 0;
+}
+
+function getTicketPrice (baseTicketPrice, daysLeftToShow, isOnWeekend) {
+  const daysLeftToShowDiscount = getDaysLeftToShow(daysLeftToShow);
+  const weekendDiscount = ifShowOnWeekend(isOnWeekend);
+
+  return baseTicketPrice - (baseTicketPrice * daysLeftToShowDiscount) + weekendDiscount;
 }
 
 console.log(getTicketPrice(10, 31, true))
