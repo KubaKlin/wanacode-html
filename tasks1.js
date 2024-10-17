@@ -18,8 +18,8 @@ console.log(isTextUppercase('START'));
 
 
 // 3
-function isDivisible(dividedNumber, divideBy1, divideBy2) {
-  return dividedNumber % divideBy1 === 0 && dividedNumber % divideBy2 === 0;
+function isDivisible(numberToDivide, firstNumberToDivideBy, secondNumberToDivideBy) {
+  return numberToDivide % firstNumberToDivideBy === 0 && numberToDivide % secondNumberToDivideBy === 0;
 }
 console.log(isDivisible(6,3,3));
 
