@@ -52,13 +52,13 @@ console.log(makeNegativeWithCheck(45));
 
 
 // 7
-function removeChar(string){
+function removeCharacter(string){
   return string.slice(1, -1);
 }
-console.log(removeChar('START'));
+console.log(removeCharacter('START'));
 
 // 8
-function basicOp(operation, valueOne, valueTwo){
+function basicOperation(operation, valueOne, valueTwo){
   if (operation === '+') {
     return valueOne + valueTwo;
   }
@@ -72,7 +72,7 @@ function basicOp(operation, valueOne, valueTwo){
     return valueOne / valueTwo;
   }
 }
-console.log(basicOp("+", 4, 8));
+console.log(basicOperation('+', 4, 8));
 
 // 9
 function century(year) {
@@ -94,9 +94,9 @@ console.log(evenOrOdd(2));
 function areYouPlayingBanjo(name) {
   const firstLetterFromName = (name.toLowerCase())[0];
   if (firstLetterFromName === 'r') {
-    return name + " plays banjo"
+    return name + ' plays banjo'
   } else {
-    return name + " does not play banjo"
+    return name + ' does not play banjo'
   }
 }
 console.log(areYouPlayingBanjo('Robert'));
