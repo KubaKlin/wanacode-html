@@ -69,20 +69,42 @@ function getRealFloor(floorNumber) {
 }
 
 // 7
-function rpsls(pl1, pl2){
-  if ((pl1 === "rock" && pl2 === "lizard") || (pl1 === "rock" && pl2 === "scissors")) return 'Player 1 Won!'
-  if ((pl1 === "scissors" && pl2 === "paper") || (pl1 === "scissors" && pl2 === "lizard")) return 'Player 1 Won!'
-  if ((pl1 === "paper" && pl2 === "rock") || (pl1 === "paper" && pl2 === "spock")) return 'Player 1 Won!'
-  if ((pl1 === "lizard" && pl2 === "spock") || (pl1 === "lizard" && pl2 === "paper")) return 'Player 1 Won!'
-  if ((pl1 === "spock" && pl2 === "scissors") || (pl1 === "spock" && pl2 === "rock")) return 'Player 1 Won!'
+function willRockWin(opponent) {
+  return opponent === 'lizard' || opponent === 'scissors';
+}
+function willPaperWin(opponent) {
+  return opponent === 'rock' || oponent === 'spock';
+}
+function willScissorsWin(opponent) {
+  return opponent === 'paper' || opponent === 'lizard';
+}
+function willLizardWin(opponent) {
+  return opponent === 'spock' || opponent === 'paper';
+}
+function willSpockWin(opponent) {
+  return opponent === 'scissors' || 'rock';
+}
 
-  if ((pl2 === "rock" && pl1 === "lizard") || (pl2 === "rock" && pl1 === "scissors")) return 'Player 2 Won!'
-  if ((pl2 === "scissors" && pl1 === "paper") || (pl2 === "scissors" && pl1 === "lizard")) return 'Player 2 Won!'
-  if ((pl2 === "paper" && pl1 === "rock") || (pl2 === "paper" && pl1 === "spock")) return 'Player 2 Won!'
-  if ((pl2 === "lizard" && pl1 === "spock") || (pl2 === "lizard" && pl1 === "paper")) return 'Player 2 Won!'
-  if ((pl2 === "spock" && pl1 === "scissors") || (pl2 === "spock" && pl1 === "rock")) return 'Player 2 Won!'
-
-  if (pl1 === pl2) return "Draw!"
+function rpsls(playerOne, playerTwo) {
+  if (playerOne === playerTwo) {
+    return 'Draw!';
+  }
+  if (playerOne === 'rock' && willRockWin(playerTwo)) {
+    return 'Player 1 Won!';
+  }
+  if (playerOne === 'paper' && willPaperWin(playerTwo)) {
+    return 'Player 1 Won!';
+  }
+  if (playerOne === 'scissors' && willScissorsWin(playerTwo)) {
+    return 'Player 1 Won!';
+  }
+  if (playerOne === 'lizard' && willLizardWin(playerTwo)) {
+    return 'Player 1 Won!';
+  }
+  if (playerOne === 'spock' && willSpockWin(playerTwo)) {
+    return 'Player 1 Won!';
+  }
+  return 'Player 2 Won!';
 }
 
 // 8
