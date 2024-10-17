@@ -109,21 +109,48 @@ function rpsls(playerOne, playerTwo) {
 
 // 8
 function isValidPassword(password) {
-  return password === 'StrongPassword123'
+  const specialChars =/[`!@#$%^&*()_\-+=\[\]{};':"\\|,.<>\/?~ ]/;
+  if ((password.trim().length >= 8) && (/[A-Z]/.test(password) >= 1 ) && (specialChars.test(password) >= 1 )) {
+    return true;
+  } return false;
 }
-console.log(isValidPassword('password'))
+console.log(isValidPassword('passSword!'));
 
 // 9
-function isPasswordStrong(passwordVar) {
-  let passwordRating = 0;
-  const specialChars =/[`!@#$%^&*()_\-+=\[\]{};':"\\|,.<>\/?~ ]/;
-  if (passwordVar.trim().length >= 8) passwordRating += 1;
-  if (/[A-Z]/.test(passwordVar) >= 1 ) passwordRating += 1;
-  if (/[a-z]/.test(passwordVar) >= 1 ) passwordRating += 1;
-  if (specialChars.test(passwordVar) >= 1 ) passwordRating += 1;
-  return passwordRating;
+function getPasswordLenght(passwordVariable) {
+  if (passwordVariable.trim().length >= 8) {
+    return 1;
+  } return 0;
 }
-console.log(isPasswordStrong('pAAs!'));
+console.log(getPasswordLenght('pass'));
+
+function getPasswordLowercaseLetter(passwordVariable) {
+  if (/[a-z]/.test(passwordVariable) >= 1 ) {
+    return 1;
+  } return 0;
+}
+
+function getPasswordUppercaseLetter(passwordVariable) {
+  if (/[A-Z]/.test(passwordVariable) >= 1 ) {
+    return 1;
+  } return 0;
+}
+
+function getPasswordSpecialLetter(passwordVariable) {
+  const specialChars =/[`!@#$%^&*()_\-+=\[\]{};':"\\|,.<>\/?~ ]/;
+  if (specialChars.test(passwordVariable) >= 1 ) {
+    return 1;
+  } return 0;
+}
+
+function getPasswordRating(passwordVariable) {
+  const passwordLength = getPasswordLenght(passwordVariable);
+  const passwordLowercase= getPasswordLowercaseLetter(passwordVariable);
+  const passwordUppercase = getPasswordUppercaseLetter(passwordVariable);
+  const passwordSpecialLetter = getPasswordSpecialLetter(passwordVariable);
+  return passwordLength + passwordLowercase + passwordUppercase + passwordSpecialLetter;
+}
+console.log(getPasswordRating('passWord'));
 
 // 10
 function getTotalOrderCost (baseItemCost, isVipMember, loyaltyPoints, isShippedInternationally) {
