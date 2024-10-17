@@ -40,20 +40,21 @@ function xor(firstVariable, secondVariable) {
 console.log(xor(true, true));
 
 // 4
-function isTruthy(bool, function1, function2) {
-  if (bool == true) return function1();
-  return function2()
+function isTruthy(bool, firstFunction, secondFuntion) {
+  if (bool == true) return firstFunction();
+  return secondFuntion();
 }
 
 // 5
 function rentalCarCost(days) {
-  if (days >= 3 && days <= 6) {
-    return days * 40 - 20
-  }
+  const baseCost = days * 40;
   if (days >= 7) {
-    return days * 40 - 50;
+    return baseCost - 50;
   }
-  return days * 40
+  if (days >= 3) {
+    return baseCost - 20;
+  }
+  return days * 40;
 }
 
 // 6
