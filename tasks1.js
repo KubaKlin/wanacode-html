@@ -93,13 +93,13 @@ console.log(evenOrOdd(2));
 // 11
 function areYouPlayingBanjo(name) {
   const firstLetterFromName = name[0];
-  if (name.toLowerCase() === 'r') {
+  if (firstLetterFromName.toLowerCase() === 'r') {
     return name + ' plays banjo'
   } else {
     return name + ' does not play banjo'
   }
 }
-console.log(areYouPlayingBanjo('Robert'));
+console.log(areYouPlayingBanjo('obert'));
 
 // 12
 function bmi(weight, height) {
