@@ -111,8 +111,12 @@ function rockPaperScissorsLizardSpock(playerOne, playerTwo) {
 
 // 8
 function isValidPassword(password) {
-  const specialCharacters =/[`!@#$%^&*()_\-+=\[\]{};':"\\|,.<>\/?~ ]/;
-  if ((password.trim().length >= 8) && (/[A-Z]/.test(password) >= 1 ) && (specialCharacters.test(password) >= 1 )) {
+  const specialCharacters = /[`!@#$%^&*()_\-+=\[\]{};':"\\|,.<>\/?~ ]/;
+  const passwordLengthCheck = password.trim().length >= 8;
+  const passwordCapitalCharactersCheck = /[A-Z]/.test(password) >= 1;
+  const passwordSpecialCharactersCheck = specialCharacters.test(password) >= 1;
+
+  if (passwordLengthCheck && passwordCapitalCharactersCheck && passwordSpecialCharactersCheck) {
     return true;
   }
   return false;
@@ -120,40 +124,40 @@ function isValidPassword(password) {
 console.log(isValidPassword('passSword!'));
 
 // 9
-function getPasswordLenght(passwordVariable) {
-  if (passwordVariable.trim().length >= 8) {
+function isPasswordLengthValid(password) {
+  if (password.trim().length >= 8) {
     return 1;
   }
   return 0;
 }
-console.log(getPasswordLenght('pass'));
+console.log(isPasswordLengthValid('pass'));
 
-function getPasswordLowercaseLetter(passwordVariable) {
-  if (/[a-z]/.test(passwordVariable) >= 1 ) {
+function hasUppercaseLetter(password) {
+  if (/[a-z]/.test(password) >= 1 ) {
     return 1;
   }
   return 0;
 }
 
-function getPasswordUppercaseLetter(passwordVariable) {
-  if (/[A-Z]/.test(passwordVariable) >= 1 ) {
+function hasLowercaseLetter(password) {
+  if (/[A-Z]/.test(password) >= 1 ) {
     return 1;
   } return 0;
 }
 
-function getPasswordSpecialLetter(passwordVariable) {
+function hasSpecialLetter(password) {
   const specialChars =/[`!@#$%^&*()_\-+=\[\]{};':"\\|,.<>\/?~ ]/;
-  if (specialChars.test(passwordVariable) >= 1 ) {
+  if (specialChars.test(password) >= 1 ) {
     return 1;
   }
   return 0;
 }
 
-function getPasswordRating(passwordVariable) {
-  const passwordLength = getPasswordLenght(passwordVariable);
-  const passwordLowercase= getPasswordLowercaseLetter(passwordVariable);
-  const passwordUppercase = getPasswordUppercaseLetter(passwordVariable);
-  const passwordSpecialLetter = getPasswordSpecialLetter(passwordVariable);
+function getPasswordRating(password) {
+  const passwordLength = isPasswordLengthValid(password);
+  const passwordLowercase= hasUppercaseLetter(password);
+  const passwordUppercase = hasLowercaseLetter(password);
+  const passwordSpecialLetter = hasSpecialLetter(password);
   return passwordLength + passwordLowercase + passwordUppercase + passwordSpecialLetter;
 }
 console.log(getPasswordRating('passWord'));
@@ -174,7 +178,7 @@ function getLoyaltyDiscount(loyaltyPoints) {
   return 0;
 }
 
-function getInternationalShipping(isShippedInternationally) {
+function getInternationalShippingPrice(isShippedInternationally) {
   if (isShippedInternationally) {
     return 10;
   }
@@ -184,21 +188,21 @@ function getInternationalShipping(isShippedInternationally) {
 function getTotalOrderCost (baseItemCost, isVipMember, loyaltyPoints, isShippedInternationally) {
   const vipMemberDiscount = getVipDiscount(isVipMember);
   const loyaltyDiscount = getLoyaltyDiscount(loyaltyPoints);
-  const shippingPrice = getInternationalShipping(isShippedInternationally);
+  const shippingPrice = getInternationalShippingPrice(isShippedInternationally);
 
   return baseItemCost - (baseItemCost * vipMemberDiscount) - loyaltyDiscount + shippingPrice
 }
 console.log(getTotalOrderCost(10,true,10,true))
 
 // 11
-function getDaysLeftToShow(daysLeftToShow) {
+function getDiscountDueToDaysLeftToShow(daysLeftToShow) {
   if (daysLeftToShow > 30) {
     return 0.10;
   }
   return 0;
 }
 
-function ifShowOnWeekend(isOnWeekend) {
+function getShowOnWeekendDiscount(isOnWeekend) {
   if (isOnWeekend) {
     return 15;
   }
@@ -206,8 +210,8 @@ function ifShowOnWeekend(isOnWeekend) {
 }
 
 function getTicketPrice (baseTicketPrice, daysLeftToShow, isOnWeekend) {
-  const daysLeftToShowDiscount = getDaysLeftToShow(daysLeftToShow);
-  const weekendDiscount = ifShowOnWeekend(isOnWeekend);
+  const daysLeftToShowDiscount = getDiscountDueToDaysLeftToShow(daysLeftToShow);
+  const weekendDiscount = getShowOnWeekendDiscount(isOnWeekend);
 
   return baseTicketPrice - (baseTicketPrice * daysLeftToShowDiscount) + weekendDiscount;
 }
