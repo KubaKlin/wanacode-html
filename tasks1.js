@@ -5,7 +5,7 @@ function convertMinutesToHours(minutes) {
 console.log(convertMinutesToHours(75));
 
 function convertMinutesToHoursInNumber(minutes) {
-  return (Math.floor(minutes / 60)) + ((minutes % 60) / 60);
+  return minutes / 60;
 }
 console.log(convertMinutesToHoursInNumber(75));
 
