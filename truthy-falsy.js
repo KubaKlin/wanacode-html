@@ -40,9 +40,11 @@ function xor(firstVariable, secondVariable) {
 console.log(xor(true, true));
 
 // 4
-function isTruthy(booleanVariable, firstFunction, secondFunction) {
-  if (booleanVariable === true) return firstFunction();
-  return secondFunction();
+function isTruthy(booleanVariable, isBooleanTruth, isBooleanFalse) {
+  if (booleanVariable === true) {
+    return isBooleanTruth();
+  }
+  return isBooleanFalse();
 }
 
 // 5
@@ -85,7 +87,7 @@ function willSpockWin(opponent) {
   return opponent === 'scissors' || 'rock';
 }
 
-function rpsls(playerOne, playerTwo) {
+function rockPaperScissorsLizardSpock(playerOne, playerTwo) {
   if (playerOne === playerTwo) {
     return 'Draw!';
   }
@@ -109,10 +111,11 @@ function rpsls(playerOne, playerTwo) {
 
 // 8
 function isValidPassword(password) {
-  const specialChars =/[`!@#$%^&*()_\-+=\[\]{};':"\\|,.<>\/?~ ]/;
-  if ((password.trim().length >= 8) && (/[A-Z]/.test(password) >= 1 ) && (specialChars.test(password) >= 1 )) {
+  const specialCharacters =/[`!@#$%^&*()_\-+=\[\]{};':"\\|,.<>\/?~ ]/;
+  if ((password.trim().length >= 8) && (/[A-Z]/.test(password) >= 1 ) && (specialCharacters.test(password) >= 1 )) {
     return true;
-  } return false;
+  }
+  return false;
 }
 console.log(isValidPassword('passSword!'));
 
@@ -120,14 +123,16 @@ console.log(isValidPassword('passSword!'));
 function getPasswordLenght(passwordVariable) {
   if (passwordVariable.trim().length >= 8) {
     return 1;
-  } return 0;
+  }
+  return 0;
 }
 console.log(getPasswordLenght('pass'));
 
 function getPasswordLowercaseLetter(passwordVariable) {
   if (/[a-z]/.test(passwordVariable) >= 1 ) {
     return 1;
-  } return 0;
+  }
+  return 0;
 }
 
 function getPasswordUppercaseLetter(passwordVariable) {
@@ -140,7 +145,8 @@ function getPasswordSpecialLetter(passwordVariable) {
   const specialChars =/[`!@#$%^&*()_\-+=\[\]{};':"\\|,.<>\/?~ ]/;
   if (specialChars.test(passwordVariable) >= 1 ) {
     return 1;
-  } return 0;
+  }
+  return 0;
 }
 
 function getPasswordRating(passwordVariable) {
@@ -157,21 +163,22 @@ console.log(getPasswordRating('passWord'));
 function getVipDiscount(isVipMember) {
   if (isVipMember) {
     return 0.05;
-  } return 1;
+  }
+  return 1;
 }
 
 function getLoyaltyDiscount(loyaltyPoints) {
   if (loyaltyPoints) {
     return loyaltyPoints * 0.01;
-  } return 0;
+  }
+  return 0;
 }
 
 function getInternationalShipping(isShippedInternationally) {
   if (isShippedInternationally) {
     return 10;
-  } else {
-    return 5;
   }
+  return 5;
 }
 
 function getTotalOrderCost (baseItemCost, isVipMember, loyaltyPoints, isShippedInternationally) {
@@ -187,13 +194,15 @@ console.log(getTotalOrderCost(10,true,10,true))
 function getDaysLeftToShow(daysLeftToShow) {
   if (daysLeftToShow > 30) {
     return 0.10;
-  } return 0;
+  }
+  return 0;
 }
 
 function ifShowOnWeekend(isOnWeekend) {
   if (isOnWeekend) {
     return 15;
-  } return 0;
+  }
+  return 0;
 }
 
 function getTicketPrice (baseTicketPrice, daysLeftToShow, isOnWeekend) {
