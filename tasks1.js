@@ -42,7 +42,7 @@ console.log(makeOppositeNumer(45));
 
 // 6
 function makeNegativeWithCheck(number) {
-  if (number < 0){
+  if (number < 0) {
     return number;
   } else {
     return number * -1;
@@ -76,7 +76,7 @@ console.log(basicOperation('+', 4, 8));
 
 // 9
 function century(year) {
-  return (Math.ceil(year / 100));
+  return Math.ceil(year / 100);
 }
 console.log(century(1801));
 
@@ -103,14 +103,14 @@ console.log(areYouPlayingBanjo('obert'));
 
 // 12
 function bmi(weight, height) {
-  const calculateBmi = weight / (height * height);
-  if (calculateBmi <= 18.5) {
+  const calculatedBmi = weight / (height * height);
+  if (calculatedBmi <= 18.5) {
     return 'Underweight';
-  } else if (calculateBmi <= 25) {
+  } else if (calculatedBmi <= 25) {
     return 'Normal';
-  } else if (calculateBmi <= 30) {
+  } else if (calculatedBmi <= 30) {
     return 'Overweight';
-  } else if (calculateBmi > 30) {
+  } else if (calculatedBmi > 30) {
     return 'Obese';
   }
 }
