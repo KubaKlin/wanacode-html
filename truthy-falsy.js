@@ -17,11 +17,11 @@ function closeCompare(firstNumber, secondNumber, numbersMargin = 0){
 }
 
 // 3
-function or(firstVariable, secondVariable) {
-  if (firstVariable === true) {
+function or(firstBoolean, secondBoolean) {
+  if (firstBoolean === true) {
     return true;
   }
-  if (secondVariable === true) {
+  if (secondBoolean === true) {
     return true;
   }
   return false;
@@ -40,9 +40,9 @@ function xor(firstVariable, secondVariable) {
 console.log(xor(true, true));
 
 // 4
-function isTruthy(bool, firstFunction, secondFuntion) {
-  if (bool == true) return firstFunction();
-  return secondFuntion();
+function isTruthy(booleanVariable, firstFunction, secondFunction) {
+  if (booleanVariable === true) return firstFunction();
+  return secondFunction();
 }
 
 // 5
