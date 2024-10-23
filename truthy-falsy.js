@@ -56,7 +56,7 @@ function rentalCarCost(days) {
   if (days >= 3) {
     return baseCost - 20;
   }
-  return days * 40;
+  return baseCost;
 }
 
 // 6
