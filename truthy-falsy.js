@@ -112,11 +112,11 @@ function rockPaperScissorsLizardSpock(playerOne, playerTwo) {
 // 8
 function isValidPassword(password) {
   const specialCharacters = /[`!@#$%^&*()_\-+=\[\]{};':"\\|,.<>\/?~ ]/;
-  const passwordLengthCheck = password.trim().length >= 8;
-  const passwordCapitalCharactersCheck = /[A-Z]/.test(password) >= 1;
-  const passwordSpecialCharactersCheck = specialCharacters.test(password) >= 1;
+  const hasCorrectLength = password.trim().length >= 8;
+  const hasCapitalLetters = /[A-Z]/.test(password) >= 1;
+  const hasSpecialCharacters = specialCharacters.test(password) >= 1;
 
-  return passwordLengthCheck && passwordCapitalCharactersCheck && passwordSpecialCharactersCheck
+  return hasCorrectLength && hasCapitalLetters && hasSpecialCharacters;
 }
 console.log(isValidPassword('passSword!'));
 
@@ -151,11 +151,11 @@ function hasSpecialLetter(password) {
 }
 
 function getPasswordRating(password) {
-  const passwordLength = isPasswordLengthValid(password);
-  const passwordLowercase= hasUppercaseLetter(password);
-  const passwordUppercase = hasLowercaseLetter(password);
-  const passwordSpecialLetter = hasSpecialLetter(password);
-  return passwordLength + passwordLowercase + passwordUppercase + passwordSpecialLetter;
+  const hasCorrectLength = isPasswordLengthValid(password);
+  const hasUppercase= hasUppercaseLetter(password);
+  const hasLowercase = hasLowercaseLetter(password);
+  const hasSpecialCharacter = hasSpecialLetter(password);
+  return hasCorrectLength + hasUppercase + hasLowercase + hasSpecialCharacter;
 }
 console.log(getPasswordRating('passWord'));
 
