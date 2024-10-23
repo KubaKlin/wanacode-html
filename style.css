@@ -24,16 +24,17 @@ body {
   overflow: hidden;
   border-right: 2px solid #fff;
   border-radius: 10px 0 0 10px;
+  width: 40%;
 }
 
 .portrait-column img {
-  width: 260px;
+  width: 100%;
 }
 
 .information-column {
   display: flex;
   flex-direction: column;
-  width: 383px;
+  width: 60%;
   color: #fff;
 }
 
