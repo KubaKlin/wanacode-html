@@ -116,10 +116,7 @@ function isValidPassword(password) {
   const passwordCapitalCharactersCheck = /[A-Z]/.test(password) >= 1;
   const passwordSpecialCharactersCheck = specialCharacters.test(password) >= 1;
 
-  if (passwordLengthCheck && passwordCapitalCharactersCheck && passwordSpecialCharactersCheck) {
-    return true;
-  }
-  return false;
+  return passwordLengthCheck && passwordCapitalCharactersCheck && passwordSpecialCharactersCheck
 }
 console.log(isValidPassword('passSword!'));
 
