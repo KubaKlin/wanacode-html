@@ -40,11 +40,11 @@ function xor(firstVariable, secondVariable) {
 console.log(xor(true, true));
 
 // 4
-function isTruthy(booleanVariable, isBooleanTruth, isBooleanFalse) {
+function isTruthy(booleanVariable, onTruthy, onFalsy) {
   if (booleanVariable === true) {
-    return isBooleanTruth();
+    return onTruthy();
   }
-  return isBooleanFalse();
+  return onFalsy();
 }
 
 // 5
