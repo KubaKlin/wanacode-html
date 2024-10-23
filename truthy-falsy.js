@@ -28,11 +28,11 @@ function or(firstBoolean, secondBoolean) {
 }
 console.log(or(true, false));
 
-function xor(firstVariable, secondVariable) {
-  if (firstVariable && !secondVariable) {
+function xor(xorFirstCondition, xorSecondCondition) {
+  if (xorFirstCondition && !xorSecondCondition) {
     return true;
   }
-  if (secondVariable && !firstVariable) {
+  if (xorSecondCondition && !xorFirstCondition) {
     return true;
   }
   return false;
