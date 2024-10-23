@@ -187,9 +187,9 @@ function getTotalOrderCost (baseItemCost, isVipMember, loyaltyPoints, isShippedI
   const loyaltyDiscount = getLoyaltyDiscount(loyaltyPoints);
   const shippingPrice = getInternationalShippingPrice(isShippedInternationally);
 
-  return baseItemCost - (baseItemCost * vipMemberDiscount) - loyaltyDiscount + shippingPrice
+  return baseItemCost - (baseItemCost * vipMemberDiscount) - loyaltyDiscount + shippingPrice;
 }
-console.log(getTotalOrderCost(10,true,10,true))
+console.log(getTotalOrderCost(10,true,10,true));
 
 // 11
 function getDiscountDueToDaysLeftToShow(daysLeftToShow) {
@@ -213,4 +213,4 @@ function getTicketPrice (baseTicketPrice, daysLeftToShow, isOnWeekend) {
   return baseTicketPrice - (baseTicketPrice * daysLeftToShowDiscount) + weekendDiscount;
 }
 
-console.log(getTicketPrice(10, 31, true))
+console.log(getTicketPrice(10, 31, true));
