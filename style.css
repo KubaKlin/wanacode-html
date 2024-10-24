@@ -1,0 +1,95 @@
+html {
+  height: 100%;
+}
+
+body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  font-size: 16px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Roboto", sans-serif;
+}
+
+.card-wrapper {
+  display: flex;
+  justify-content: center;
+  max-width: 643px;
+  max-height: 380px;
+}
+
+.portrait-column {
+  overflow: hidden;
+  border-right: 2px solid #fff;
+  border-radius: 10px 0 0 10px;
+  width: 40%;
+}
+
+.portrait-column img {
+  width: 100%;
+}
+
+.information-column {
+  display: flex;
+  flex-direction: column;
+  width: 60%;
+  color: #fff;
+}
+
+.name-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex-basis: 50%;
+  padding-inline: 16px;
+  border-bottom: 2px solid #fff;
+  background-color: #192028;
+  font-size: 25px;
+  border-radius: 0 10px 0 0;
+}
+
+.name-container .surname {
+  text-transform: uppercase;
+  font-size: 30px;
+  margin-bottom: 14px;
+}
+
+.name-container .occupation {
+  color: #6487A1;
+}
+
+.contact-container {
+  display: flex;
+  align-items: center;
+  flex-basis: 50%;
+  background-color: #2B3944;
+  font-size: 20px;
+  border-radius: 0 0 10px 0;
+}
+
+.contact-list {
+  width: 100%;
+  margin: 0;
+  padding-left: 16px;
+  list-style: none;
+}
+
+.contact-list li {
+  display: flex;
+  align-items: center;
+  padding-block: 12px;
+}
+
+.contact-list li img {
+  margin-right: 12px;
+}
+
+.contact-list li span {
+  display: block;
+  width: 100%;
+  font-weight: 400;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.4);
+}
+
