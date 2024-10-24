@@ -40,11 +40,11 @@ function xor(xorFirstCondition, xorSecondCondition) {
 console.log(xor(true, true));
 
 // 4
-function isTruthy(booleanVariable, onTruthy, onFalsy) {
+function isTruthy(booleanVariable, callbackOnTruthy, callbackOnFalsy) {
   if (booleanVariable === true) {
-    return onTruthy();
+    return callbackOnTruthy();
   }
-  return onFalsy();
+  return callbackOnFalsy();
 }
 
 // 5
